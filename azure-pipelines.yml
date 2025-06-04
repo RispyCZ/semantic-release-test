@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+variables:
+  - group: learning-azure
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: UseNode@1
+  inputs:
+    version: 22.x
+  displayName: 'Install Node.JS'
+ 
+- script: node -v
+  displayName: 'Show node version'
+
+- script: npx semantic-release
+  displayName: 'Semantic release'
