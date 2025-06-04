@@ -22,5 +22,7 @@ steps:
 - script: node -v
   displayName: 'Show node version'
 
-- script: npx semantic-release
+- script: |
+    npm ci
+    npm run semantic-release
   displayName: 'Semantic release'
