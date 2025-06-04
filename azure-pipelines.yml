@@ -25,4 +25,7 @@ steps:
 - script: |
     npm ci
     npm run semantic-release
+  env:
+    GITHUB_TOKEN: $(GITHUB_TOKEN)
+    NPM_TOKEN: $(GITHUB_TOKEN)
   displayName: 'Semantic release'
