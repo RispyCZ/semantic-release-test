@@ -1,6 +1,10 @@
 {
-  "name": "semantic-release",
+  "name": "@rispycz/semantic-release",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RispyCZ/semantic-release-test.git"
+  },
   "description": "",
   "license": "ISC",
   "author": "",
@@ -11,5 +15,8 @@
   },
   "devDependencies": {
     "semantic-release": "^24.2.5"
+  },
+  "release": {
+    "branches": ["master"]
   }
 }
