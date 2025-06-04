@@ -23,9 +23,10 @@ steps:
   displayName: 'Show node version'
 
 - script: |
+    
     npm ci
     npx semantic-release
   env:
-    GITHUB_TOKEN: $(GITHUB_TOKEN)
-    NPM_TOKEN: $(GITHUB_TOKEN)
+    GH_TOKEN: $(GH_TOKEN)
+    NPM_TOKEN: $(NPM_TOKEN)
   displayName: 'Semantic release'
